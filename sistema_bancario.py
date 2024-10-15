@@ -73,3 +73,5 @@ def menu():
             print("Opção inválida! Escolha uma opção válida.")
 
 menu()
+
+#teste actions
