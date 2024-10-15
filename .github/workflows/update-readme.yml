@@ -14,7 +14,7 @@ jobs:
 
       - name: List branches in README.md
         run: |
-          echo "# My Project Branches" > README.md
+          echo "# Minhas Branches" > README.md
           echo "" >> README.md
           echo "## Branches disponíveis:" >> README.md
           git branch -r | sed 's/origin\///g' >> README.md
