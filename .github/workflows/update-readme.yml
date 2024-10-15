@@ -19,7 +19,9 @@ jobs:
           echo "# Minhas Branches" > README.md
           echo "" >> README.md
           echo "## Branches disponíveis:" >> README.md
-          git branch -r | sed 's/origin\///g' >> README.md
+          git branch -r | sed 's/origin\///g' | while read branch; do
+            echo "- $branch" >> README.md
+          done
 
       - name: Commit changes
         run: |
