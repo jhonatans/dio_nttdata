@@ -9,8 +9,10 @@ jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout all branches
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Faz o clone completo com todas as branches
 
       - name: List branches in README.md
         run: |
@@ -26,4 +28,3 @@ jobs:
           git add README.md
           git commit -m "Atualizando lista de branches"
           git push
-
